@@ -12,6 +12,18 @@
 - Proper security group chaining done to maintain RPC wiring.
 - Fargate task in public subnet with port 80 exposed.
 
+## Instructions to deploy:
+- Use the cli command below to deploy the IaC template on aws:
+  aws cloudformation deploy \
+  --template-file template.yaml \
+  --stack-name alchemyst-inference-stack \
+  --region ap-south-1 \
+  --capabilities CAPABILITY_IAM
+- Use this to tear the infrastructure down:
+  aws cloudformation delete-stack \
+  --stack-name alchemyst-inference-stack \
+  --region ap-south-1
+  
 ## Production hardening I would add
 
 - HTTPS on the REST API endpoint with ACM certificate
