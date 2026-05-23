@@ -1,17 +1,5 @@
 ## Architecture
-Internet
-    |
-    | (port 80)
-    |
-[REST API - Fargate - Public Subnet 10.0.1.0/24]
-    |
-    | (RPC - port 49134)
-    |
-[Caller EC2 - Private Subnet 10.0.2.0/24]
-    |
-    | (RPC - port 49134)
-    |
-[Inference EC2 - Private Subnet 10.0.2.0/24]
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/8a18adff-c194-4db1-8cf6-e6a4160e5425" />
 
 ## Trade-off decision made:
 - Fargate for REST API instead of as 29 second timeout incompatible with inference workloads.
