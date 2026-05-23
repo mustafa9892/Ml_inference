@@ -14,12 +14,14 @@
 
 ## Instructions to deploy:
 - Use the cli command below to deploy the IaC template on aws:
+
   aws cloudformation deploy \
-  --template-file template.yaml \
+  --template-file ml_infra.yaml \
   --stack-name alchemyst-inference-stack \
   --region ap-south-1 \
   --capabilities CAPABILITY_IAM
 - Use this to tear the infrastructure down:
+
   aws cloudformation delete-stack \
   --stack-name alchemyst-inference-stack \
   --region ap-south-1
